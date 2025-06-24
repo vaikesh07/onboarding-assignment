@@ -31,6 +31,36 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 def score(dice)
   # You need to write this method
+  dice=dice.sort()
+  sum=0
+  frequency_map = { 1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0 }
+  dice.each do |element|
+    if frequency_map.key?(element) # Check if the element is one of the keys we're tracking
+      frequency_map[element] += 1
+    else
+      # Optional: Handle elements outside the 1-6 range if they might appear
+      # puts "Warning: Element #{element} is outside the expected range (1-6)."
+    end
+  end
+  frequency_map.each do |key, occurrence|
+    if(key==1 && occurrence>=3)
+      sum+=1000
+      occurrence-=3
+    end
+    if(occurrence>=3)
+      sum+=(key*100)
+      occurrence-=3
+    end
+
+    if(key==1)
+      sum+=(occurrence*100)
+      occurrence=0
+    elsif(key==5)
+      sum+=(occurrence*50)
+      occurrence=0
+    end
+  end
+  return sum
 end
 
 class AboutScoringProject < Neo::Koan
