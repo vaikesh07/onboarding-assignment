@@ -3,3 +3,9 @@ You already have a DiceSet class and score function you can use (written as part
 
 Ruby version expected: v2.6.6
 Also add RSpecs (Unit tests) along with the code. Rspec version 3.10.x
+
+
+To play the game, execute the run.rb file.
+
+cd greed
+ruby run.rb
