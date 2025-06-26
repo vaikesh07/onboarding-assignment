@@ -1,0 +1,11 @@
+# Gemfile
+source 'https://rubygems.org'
+
+ruby '2.6.10'
+
+gem 'sinatra'
+gem 'json'
+gem 'rspec', '~> 3.10'
+gem 'rack-test'
+gem 'timecop' # For time manipulation in tests
+# gem 'concurrent-ruby' # Not strictly needed if using Monitor, but good for future concurrency needs
