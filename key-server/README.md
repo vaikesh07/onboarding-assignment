@@ -17,7 +17,7 @@ You should build this without full fledged Rails framework
 Please make sure you use rspec 3.X
 
 ## Installing Dependencies
-bundle install
+bundle install (if asking for permission, try with sudo)
 
 ## Run Server
 ruby app.rb

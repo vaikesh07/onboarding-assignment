@@ -2,7 +2,7 @@ require 'securerandom'
 class KeygenServer
     attr_reader :keys, :available_keys, :deleted_keys
     def initialize
-        @KEY_SIZE = 12
+        @KEY_SIZE = 6
         @keys = {}
         @available_keys = Set.new
         @deleted_keys = Set.new
