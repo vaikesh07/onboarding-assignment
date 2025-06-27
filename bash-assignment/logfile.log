@@ -1,0 +1,236 @@
+1725-prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:6739:Started POST "/terminal/find_session_id" for 74.87.203.51 at Wed Jun 10 00:00:51 +0000 2015
+1726:prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:6796:Completed 200 OK in 51369ms (Views: 0.2ms | ActiveRecord: 266.1ms | Sphinx: 0.0ms)
+--
+2603-prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:10306:Started POST "/terminal/find_session_id" for 208.31.255.33 at Wed Jun 10 00:01:58 +0000 2015
+2604:prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:10363:Completed 200 OK in 51521ms (Views: 0.2ms | ActiveRecord: 289.9ms | Sphinx: 0.0ms)
+--
+2771-prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:10997:Started GET "/user/disconnect_tunnel?key=UKquVRUkGZR1HW1cms5Q&timestamp=1433894527035" for 134.84.142.36 at Wed Jun 10 00:02:07 +0000 2015
+2772:prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:11055:Completed 200 OK in 52276ms (Views: 0.2ms | ActiveRecord: 189.1ms | Sphinx: 0.0ms)
+--
+6434-prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:25440:Started POST "/terminal/start" for 108.26.195.37 at Wed Jun 10 00:07:02 +0000 2015
+6435:prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:25503:Completed 200 OK in 55124ms (Views: 0.2ms | ActiveRecord: 388.2ms | Sphinx: 0.0ms)
+--
+6612-prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:26186:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=B8wBYyyYuEFqFpuwnpD9-chrome&version=12.0&auth_token=B8wBYyyYuEFqFpuwnpD9-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 74.87.203.51 at Wed Jun 10 00:07:13 +0000 2015
+6613:prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:26196:Completed 200 OK in 57484ms (Views: 0.4ms | ActiveRecord: 40.8ms | Sphinx: 0.0ms)
+--
+739487-prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2934358:Started GET "/automate/8c7560d37c308befea72bea54db5253b9a2fbe50/error_logs" for 132.185.160.97 at Wed Jun 10 11:30:43 +0000 2015
+739488:prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2934363:Completed 200 OK in 68025ms (Views: 13.9ms | ActiveRecord: 24.0ms | Sphinx: 0.0ms)
+--
+1025398-prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4083391:Started POST "/admin/user_search" for 114.143.208.210 at Wed Jun 10 14:14:42 +0000 2015
+1025399:prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4083395:Completed 200 OK in 88538ms (Views: 36484.0ms | ActiveRecord: 51433.7ms | Sphinx: 0.0ms)
+--
+1241400-prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4958901:Started POST "/user/features_seen" for 75.151.147.205 at Wed Jun 10 16:05:04 +0000 2015
+1241401:prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4958903:Completed 500 Internal Server Error in 51450ms
+--
+1243424-prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4967015:Started GET "/terminal/stop?reason=" for 75.151.147.205 at Wed Jun 10 16:06:11 +0000 2015
+1243425:prod10.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4967038:Completed 200 OK in 52385ms (Views: 0.2ms | ActiveRecord: 39102.4ms | Sphinx: 0.0ms)
+--
+1810643-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2557:Started POST "/terminal/find_session_id" for 198.91.78.6 at Wed Jun 10 00:00:04 +0000 2015
+1810644:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2615:Completed 200 OK in 52259ms (Views: 0.2ms | ActiveRecord: 154.8ms | Sphinx: 0.0ms)
+--
+1811093-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4436:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=B8wBYyyYuEFqFpuwnpD9-chrome&version=12.0&auth_token=B8wBYyyYuEFqFpuwnpD9-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 74.87.203.51 at Wed Jun 10 00:00:45 +0000 2015
+1811094:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4446:Completed 200 OK in 57440ms (Views: 0.5ms | ActiveRecord: 10.6ms | Sphinx: 0.0ms)
+--
+1811375-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5524:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=x1bnp7FNp1yZCfmesxQu-chrome&version=12.0&auth_token=x1bnp7FNp1yZCfmesxQu-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 198.91.78.6 at Wed Jun 10 00:01:04 +0000 2015
+1811376:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5534:Completed 200 OK in 57468ms (Views: 0.5ms | ActiveRecord: 23.7ms | Sphinx: 0.0ms)
+--
+1811587-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:6373:Started GET "/proxy/port?hostports=*,*,0&localServer=0&key=x6XpuJfx1Lns12yJq2KJ&version=3.7&auth_token=x6XpuJfx1Lns12yJq2KJ&tunnel=node&proxy_type=privoxy&consistent_version=2&force_local=false" for 162.243.243.33 at Wed Jun 10 00:01:37 +0000 2015
+1811588:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:6383:Completed 200 OK in 57471ms (Views: 0.4ms | ActiveRecord: 51.9ms | Sphinx: 0.0ms)
+--
+1811811-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7245:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=UKquVRUkGZR1HW1cms5Q-chrome&version=12.0&auth_token=UKquVRUkGZR1HW1cms5Q-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 134.84.142.36 at Wed Jun 10 00:02:01 +0000 2015
+1811812:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7255:Completed 200 OK in 57484ms (Views: 0.5ms | ActiveRecord: 18.2ms | Sphinx: 0.0ms)
+--
+1811819-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7281:Started GET "/user/disconnect_tunnel?key=pGp8zXuF8BY9qSELvZCM&timestamp=1433894537309" for 208.31.255.33 at Wed Jun 10 00:01:58 +0000 2015
+1811820:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7350:Completed 500 Internal Server Error in 60224ms
+--
+1813142-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:12536:Started GET "/user/disconnect_tunnel?key=tHWRXrWNUbqmZZs1kCev&timestamp=1433894627132" for 70.30.119.124 at Wed Jun 10 00:03:47 +0000 2015
+1813143:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:12597:Completed 200 OK in 55214ms (Views: 0.2ms | ActiveRecord: 117.7ms | Sphinx: 0.0ms)
+--
+1815967-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:23667:Started POST "/terminal/find_session_id" for 70.30.119.124 at Wed Jun 10 00:07:09 +0000 2015
+1815968:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:23727:Completed 200 OK in 54467ms (Views: 0.2ms | ActiveRecord: 139.9ms | Sphinx: 0.0ms)
+--
+2859195-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4175911:Started GET "/automate/2f791dca945ec933e1131cbd29f2623ba28fa5c7/error_logs?user_id=43909" for 114.143.208.210 at Wed Jun 10 14:04:44 +0000 2015
+2859196:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4175915:Completed 200 OK in 91679ms (Views: 0.7ms | ActiveRecord: 7.7ms | Sphinx: 0.0ms)
+--
+3108115-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5183808:Started GET "/terminal/is_on?ts=1433952331067&b=undefined&v=undefined&timestamp=1433952301348&sl=23434745&tabOpened=1433952301356" for 75.151.147.205 at Wed Jun 10 16:05:31 +0000 2015
+3108116:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5183877:Completed 500 Internal Server Error in 60189ms
+--
+3109143-prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5187867:Started POST "/main/sns_data" for 54.239.98.227 at Wed Jun 10 16:05:59 +0000 2015
+3109144:prod11.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5187936:Completed 200 OK in 63368ms (Views: 0.8ms | ActiveRecord: 3261.5ms | Sphinx: 0.0ms)
+--
+3704072-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7228:Started GET "/proxy/port?hostports=*,*,0&localServer=0&key=7xNdFj4js9K5kDf6bQWh&version=3.7&auth_token=7xNdFj4js9K5kDf6bQWh&tunnel=node&proxy_type=privoxy&consistent_version=2&force_local=false" for 50.97.40.226 at Wed Jun 10 00:01:01 +0000 2015
+3704073:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7238:Completed 200 OK in 57673ms (Views: 0.4ms | ActiveRecord: 45.7ms | Sphinx: 0.0ms)
+--
+3704232-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7844:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=kpyz7hyYw5gP3fpppE2q-chrome&version=12.0&auth_token=kpyz7hyYw5gP3fpppE2q-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 24.51.210.245 at Wed Jun 10 00:01:18 +0000 2015
+3704233:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7854:Completed 200 OK in 57447ms (Views: 0.4ms | ActiveRecord: 30.2ms | Sphinx: 0.0ms)
+--
+3704866-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:10320:Started GET "/user/disconnect_tunnel?key=FMPiDDfg1B6JoK6sJFsi&timestamp=1433894544583" for 50.155.27.87 at Wed Jun 10 00:02:24 +0000 2015
+3704867:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:10376:Completed 200 OK in 50196ms (Views: 0.2ms | ActiveRecord: 119.7ms | Sphinx: 0.0ms)
+--
+3705223-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:11696:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=pGp8zXuF8BY9qSELvZCM-chrome&version=12.0&auth_token=pGp8zXuF8BY9qSELvZCM-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=true" for 208.31.255.33 at Wed Jun 10 00:02:33 +0000 2015
+3705224:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:11723:Completed 200 OK in 74642ms (Views: 0.4ms | ActiveRecord: 43.9ms | Sphinx: 0.0ms)
+--
+3705694-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:13503:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=tHWRXrWNUbqmZZs1kCev-chrome&version=12.0&auth_token=tHWRXrWNUbqmZZs1kCev-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 70.30.119.124 at Wed Jun 10 00:03:41 +0000 2015
+3705695:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:13513:Completed 200 OK in 57439ms (Views: 0.4ms | ActiveRecord: 27.9ms | Sphinx: 0.0ms)
+--
+3708478-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:24186:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=c3xyJhZmqbbYJ8Lz3Kj5-chrome&version=12.0&auth_token=c3xyJhZmqbbYJ8Lz3Kj5-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 108.26.195.37 at Wed Jun 10 00:06:56 +0000 2015
+3708479:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:24196:Completed 200 OK in 57460ms (Views: 0.4ms | ActiveRecord: 20.5ms | Sphinx: 0.0ms)
+--
+3708720-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:25102:Started POST "/terminal/find_session_id" for 74.87.203.51 at Wed Jun 10 00:07:19 +0000 2015
+3708721:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:25161:Completed 200 OK in 53279ms (Views: 0.2ms | ActiveRecord: 178.1ms | Sphinx: 0.0ms)
+--
+4805153-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4391671:Started POST "/admin/user_search" for 114.143.208.210 at Wed Jun 10 14:24:29 +0000 2015
+4805154:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4391675:Completed 200 OK in 66976ms (Views: 35833.5ms | ActiveRecord: 30799.7ms | Sphinx: 0.0ms)
+--
+5011500-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5228742:Started POST "/main/sns_data" for 54.239.98.164 at Wed Jun 10 16:05:02 +0000 2015
+5011501:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5228811:Completed 200 OK in 60516ms (Views: 0.5ms | ActiveRecord: 435.8ms | Sphinx: 0.0ms)
+--
+5011764-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5229819:Started GET "/terminal/is_on?ts=1433952311062&b=undefined&v=undefined&timestamp=1433952301348&sl=23434745&tabOpened=1433952301356" for 75.151.147.205 at Wed Jun 10 16:05:11 +0000 2015
+5011765:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5229888:Completed 500 Internal Server Error in 60219ms
+--
+5012166-prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5231525:Started GET "/terminal/is_on?ts=1433952321064&b=undefined&v=undefined&timestamp=1433952301348&sl=23434745&tabOpened=1433952301356" for 75.151.147.205 at Wed Jun 10 16:05:24 +0000 2015
+5012167:prod4.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5231594:Completed 500 Internal Server Error in 60207ms
+--
+5613716-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1293:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=QcmWnmu7HZFjKdWqZxLT-chrome&version=12.0&auth_token=QcmWnmu7HZFjKdWqZxLT-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 72.204.177.72 at Tue Jun 09 23:59:55 +0000 2015
+5613717:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1303:Completed 200 OK in 57713ms (Views: 0.4ms | ActiveRecord: 11.8ms | Sphinx: 0.0ms)
+--
+5613734-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1366:Started POST "/terminal/find_session_id" for 72.204.177.72 at Wed Jun 10 00:00:01 +0000 2015
+5613735:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1424:Completed 200 OK in 52480ms (Views: 0.2ms | ActiveRecord: 197.0ms | Sphinx: 0.0ms)
+--
+5613764-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1529:Started GET "/user/disconnect_tunnel?key=x1bnp7FNp1yZCfmesxQu&timestamp=1433894403913" for 198.91.78.6 at Wed Jun 10 00:00:04 +0000 2015
+5613765:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1587:Completed 200 OK in 52220ms (Views: 0.2ms | ActiveRecord: 128.9ms | Sphinx: 0.0ms)
+--
+5617160-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:14953:Started POST "/terminal/find_session_id" for 70.30.119.124 at Wed Jun 10 00:03:47 +0000 2015
+5617161:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:15011:Completed 200 OK in 52220ms (Views: 0.2ms | ActiveRecord: 105.1ms | Sphinx: 0.0ms)
+--
+5617504-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:16293:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=6J1sK1iUw7FaosViP6xT-firefox&version=12.0&auth_token=6J1sK1iUw7FaosViP6xT-firefox&tunnel=firefox&proxy_type=privoxy&consistent_version=2&force_local=false" for 181.166.215.236 at Wed Jun 10 00:04:07 +0000 2015
+5617505:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:16303:Completed 200 OK in 57570ms (Views: 0.7ms | ActiveRecord: 17.1ms | Sphinx: 0.0ms)
+--
+5620136-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:26540:Started GET "/terminal/is_on?ts=1433894830513&b=IE&v=9.0&timestamp=1433894829548&sl=&tabOpened=1433894595665" for 70.30.119.124 at Wed Jun 10 00:07:10 +0000 2015
+5620137:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:26604:Completed 200 OK in 57195ms (Views: 0.2ms | ActiveRecord: 99.5ms | Sphinx: 0.0ms)
+--
+6183982-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2253162:Started GET "/automate" for 135.196.89.143 at Wed Jun 10 09:27:46 +0000 2015
+6183983:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2253197:Completed 200 OK in 154643ms (Views: 353.5ms | ActiveRecord: 154104.7ms | Sphinx: 0.0ms)
+--
+6555530-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:3744820:Started GET "/terminal/stop?reason=" for 212.98.163.34 at Wed Jun 10 13:09:02 +0000 2015
+6555531:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:3744883:Completed 200 OK in 50868ms (Views: 0.3ms | ActiveRecord: 654.7ms | Sphinx: 0.0ms)
+--
+6646684-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4111215:Started GET "/automate/a8c63b75a162f98506c8563f6dc58ea636e7f53a/error_logs?user_id=43909" for 114.143.208.210 at Wed Jun 10 13:54:47 +0000 2015
+6646685:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4111219:Completed 200 OK in 72808ms (Views: 7.8ms | ActiveRecord: 24.5ms | Sphinx: 0.0ms)
+--
+6654607-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4142981:Started GET "/automate/builds/71652f6a4b5270fbf9c1fd727d169df78a60e173/sessions/2f791dca945ec933e1131cbd29f2623ba28fa5c7?user_id=43909" for 114.143.208.210 at Wed Jun 10 13:58:53 +0000 2015
+6654608:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4143025:Completed 200 OK in 50045ms (Views: 817.0ms | ActiveRecord: 1664.8ms | Sphinx: 0.0ms)
+--
+6920681-prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5219324:Started GET "/terminal/update_time" for 75.151.147.205 at Wed Jun 10 16:05:56 +0000 2015
+6920682:prod5.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5219342:Completed 500 Internal Server Error in 65558ms
+--
+7518951-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2127:Started GET "/user/disconnect_tunnel?key=QcmWnmu7HZFjKdWqZxLT&timestamp=1433894401003" for 72.204.177.72 at Wed Jun 10 00:00:01 +0000 2015
+7518952:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2186:Completed 200 OK in 53429ms (Views: 0.2ms | ActiveRecord: 203.9ms | Sphinx: 0.0ms)
+--
+7519872-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5720:Started GET "/user/disconnect_tunnel?key=gqvX7sDMcLpts4ziH8Xv&timestamp=1433894473965" for 104.162.6.11 at Wed Jun 10 00:01:14 +0000 2015
+7519873:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5778:Completed 200 OK in 52254ms (Views: 0.2ms | ActiveRecord: 161.9ms | Sphinx: 0.0ms)
+--
+7519904-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5899:Started GET "/user/disconnect_tunnel?key=kpyz7hyYw5gP3fpppE2q&timestamp=1433894482295" for 24.51.210.245 at Wed Jun 10 00:01:24 +0000 2015
+7519905:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5956:Completed 200 OK in 51394ms (Views: 0.2ms | ActiveRecord: 177.1ms | Sphinx: 0.0ms)
+--
+7520256-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7265:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=pGp8zXuF8BY9qSELvZCM-chrome&version=12.0&auth_token=pGp8zXuF8BY9qSELvZCM-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=true" for 208.31.255.33 at Wed Jun 10 00:01:52 +0000 2015
+7520257:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:7275:Completed 200 OK in 57606ms (Views: 0.4ms | ActiveRecord: 26.5ms | Sphinx: 0.0ms)
+--
+7520466-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:8061:Started POST "/terminal/find_session_id" for 134.84.142.36 at Wed Jun 10 00:02:07 +0000 2015
+7520467:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:8120:Completed 200 OK in 53489ms (Views: 0.2ms | ActiveRecord: 227.1ms | Sphinx: 0.0ms)
+--
+7523512-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:20093:Started GET "/user/disconnect_tunnel?key=YyLhep7qyJPYcrPX8KYL&timestamp=1433894779365" for 108.30.103.121 at Wed Jun 10 00:06:19 +0000 2015
+7523513:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:20151:Completed 200 OK in 52222ms (Views: 0.2ms | ActiveRecord: 155.3ms | Sphinx: 0.0ms)
+--
+7524508-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:24015:Started GET "/user/disconnect_tunnel?key=B8wBYyyYuEFqFpuwnpD9&timestamp=1433894839548" for 74.87.203.51 at Wed Jun 10 00:07:19 +0000 2015
+7524509:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:24073:Completed 200 OK in 52240ms (Views: 0.2ms | ActiveRecord: 167.0ms | Sphinx: 0.0ms)
+--
+7763969-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:958340:Started POST "/admin/run_query" for 114.143.208.210 at Wed Jun 10 05:36:59 +0000 2015
+7763970:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:958344:Completed 200 OK in 52192ms (Views: 292.6ms | ActiveRecord: 51896.8ms | Sphinx: 0.0ms)
+--
+7809428-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1137366:Started POST "/terminal/start" for 202.56.61.2 at Wed Jun 10 06:27:47 +0000 2015
+7809429:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1137435:Completed 500 Internal Server Error in 61582ms
+--
+8732346-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4844868:Started GET "/automate/dashboard_update/28091011/new?&_=1433951165354" for 80.113.169.195 at Wed Jun 10 15:46:05 +0000 2015
+8732347:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4844873:Completed 200 OK in 80929ms (Views: 1.1ms | ActiveRecord: 80936.2ms | Sphinx: 0.0ms)
+--
+8765730-prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4980146:Started POST "/terminal/start" for 75.151.147.205 at Wed Jun 10 16:05:01 +0000 2015
+8765731:prod6.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4980154:Completed 500 Internal Server Error in 52884ms
+--
+9340334-prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2555:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=x1bnp7FNp1yZCfmesxQu-chrome&version=12.0&auth_token=x1bnp7FNp1yZCfmesxQu-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 198.91.78.6 at Tue Jun 09 23:59:58 +0000 2015
+9340335:prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2565:Completed 200 OK in 57454ms (Views: 0.5ms | ActiveRecord: 23.7ms | Sphinx: 0.0ms)
+--
+9341242-prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:6100:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=gqvX7sDMcLpts4ziH8Xv-chrome&version=12.0&auth_token=gqvX7sDMcLpts4ziH8Xv-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 104.162.6.11 at Wed Jun 10 00:01:08 +0000 2015
+9341243:prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:6110:Completed 200 OK in 57470ms (Views: 0.4ms | ActiveRecord: 29.9ms | Sphinx: 0.0ms)
+--
+9341248-prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:6126:Started POST "/terminal/find_session_id" for 198.91.78.6 at Wed Jun 10 00:01:10 +0000 2015
+9341249:prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:6189:Completed 200 OK in 55425ms (Views: 0.2ms | ActiveRecord: 298.8ms | Sphinx: 0.0ms)
+--
+9341985-prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:9103:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=FMPiDDfg1B6JoK6sJFsi-chrome&version=12.0&auth_token=FMPiDDfg1B6JoK6sJFsi-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 50.155.27.87 at Wed Jun 10 00:02:16 +0000 2015
+9341986:prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:9113:Completed 200 OK in 57457ms (Views: 0.5ms | ActiveRecord: 46.1ms | Sphinx: 0.0ms)
+--
+9345745-prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:23970:Started GET "/user/disconnect_tunnel?key=c3xyJhZmqbbYJ8Lz3Kj5&timestamp=1433894822660" for 108.26.195.37 at Wed Jun 10 00:07:02 +0000 2015
+9345746:prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:24028:Completed 200 OK in 52452ms (Views: 0.2ms | ActiveRecord: 157.1ms | Sphinx: 0.0ms)
+--
+9409626-prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:273569:Started POST "/admin/blacklist_and_block_ip" for 174.129.203.223 at Wed Jun 10 01:41:46 +0000 2015
+9409627:prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:273572:Completed 200 OK in 74712ms (Views: 0.3ms | ActiveRecord: 74701.7ms | Sphinx: 0.0ms)
+--
+9871128-prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2100767:Started GET "/admin/automation_stats?utf8=%E2%9C%93&group_id=1139811&day=2015-06-09&commit=Find" for 114.143.208.210 at Wed Jun 10 09:29:22 +0000 2015
+9871129:prod7.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2100772:Completed 200 OK in 92193ms (Views: 6.6ms | ActiveRecord: 92172.8ms | Sphinx: 0.0ms)
+--
+11126257-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4640:Started GET "/user/disconnect_tunnel?key=B8wBYyyYuEFqFpuwnpD9&timestamp=1433894451379" for 74.87.203.51 at Wed Jun 10 00:00:51 +0000 2015
+11126258:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4700:Completed 200 OK in 54336ms (Views: 0.2ms | ActiveRecord: 104.7ms | Sphinx: 0.0ms)
+--
+11126453-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5436:Started GET "/user/disconnect_tunnel?key=x1bnp7FNp1yZCfmesxQu&timestamp=1433894470421" for 198.91.78.6 at Wed Jun 10 00:01:10 +0000 2015
+11126454:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5494:Completed 200 OK in 52360ms (Views: 0.2ms | ActiveRecord: 111.7ms | Sphinx: 0.0ms)
+--
+11126501-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5676:Started POST "/terminal/find_session_id" for 104.162.6.11 at Wed Jun 10 00:01:14 +0000 2015
+11126502:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5734:Completed 200 OK in 52259ms (Views: 0.2ms | ActiveRecord: 142.8ms | Sphinx: 0.0ms)
+--
+11127355-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:9036:Started POST "/terminal/find_session_id" for 50.155.27.87 at Wed Jun 10 00:02:24 +0000 2015
+11127356:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:9092:Completed 200 OK in 50262ms (Views: 0.3ms | ActiveRecord: 135.3ms | Sphinx: 0.0ms)
+--
+11130280-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:20546:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=YyLhep7qyJPYcrPX8KYL-chrome&version=12.0&auth_token=YyLhep7qyJPYcrPX8KYL-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 108.30.103.121 at Wed Jun 10 00:06:13 +0000 2015
+11130281:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:20556:Completed 200 OK in 57464ms (Views: 0.4ms | ActiveRecord: 17.3ms | Sphinx: 0.0ms)
+--
+11130292-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:20601:Started POST "/terminal/find_session_id" for 108.30.103.121 at Wed Jun 10 00:06:19 +0000 2015
+11130293:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:20658:Completed 200 OK in 52242ms (Views: 0.2ms | ActiveRecord: 133.3ms | Sphinx: 0.0ms)
+--
+11131191-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:24098:Started GET "/proxy/port?hostports=google.com,80,0&localServer=0&key=tHWRXrWNUbqmZZs1kCev-chrome&version=12.0&auth_token=tHWRXrWNUbqmZZs1kCev-chrome&tunnel=chrome&proxy_type=privoxy&consistent_version=2&force_local=false" for 70.30.119.124 at Wed Jun 10 00:07:03 +0000 2015
+11131192:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:24108:Completed 200 OK in 57500ms (Views: 0.4ms | ActiveRecord: 36.7ms | Sphinx: 0.0ms)
+--
+11459741-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1311111:Started GET "/automate/9d1f22d3e2df4170283248234c7ba39618a02d42/error_logs" for 101.163.9.46 at Wed Jun 10 06:56:29 +0000 2015
+11459742:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:1311116:Completed 200 OK in 69567ms (Views: 2.2ms | ActiveRecord: 6.3ms | Sphinx: 0.0ms)
+--
+11694855-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2253120:Started GET "/admin/automation_stats?utf8=%E2%9C%93&group_id=1139811&day=2015-06-09&commit=Find" for 114.143.208.210 at Wed Jun 10 09:29:43 +0000 2015
+11694856:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2253125:Completed 200 OK in 71532ms (Views: 4.7ms | ActiveRecord: 71496.2ms | Sphinx: 0.0ms)
+--
+12042764-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:3649104:Started GET "/automate/dashboard_update/28032107/new?&_=1433940657385" for 45.37.172.83 at Wed Jun 10 12:50:57 +0000 2015
+12042765:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:3649109:Completed 200 OK in 58598ms (Views: 1.1ms | ActiveRecord: 58592.4ms | Sphinx: 0.0ms)
+--
+12450782-prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5296150:Started POST "/user/onboarded" for 75.151.147.205 at Wed Jun 10 16:06:11 +0000 2015
+12450783:prod8.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5296152:Completed 500 Internal Server Error in 50266ms
+--
+13054081-prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:8739:Started POST "/terminal/find_session_id" for 24.51.210.245 at Wed Jun 10 00:01:24 +0000 2015
+13054082:prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:8797:Completed 200 OK in 52530ms (Views: 0.2ms | ActiveRecord: 189.7ms | Sphinx: 0.0ms)
+--
+13059201-prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:28566:Started GET "/user/disconnect_tunnel?key=tHWRXrWNUbqmZZs1kCev&timestamp=1433894829531" for 70.30.119.124 at Wed Jun 10 00:07:09 +0000 2015
+13059202:prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:28624:Completed 200 OK in 52585ms (Views: 0.3ms | ActiveRecord: 81.7ms | Sphinx: 0.0ms)
+--
+13612665-prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2215948:Started GET "/automate" for 135.196.89.143 at Wed Jun 10 09:29:11 +0000 2015
+13612666:prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2215983:Completed 200 OK in 70057ms (Views: 448.8ms | ActiveRecord: 69600.3ms | Sphinx: 0.0ms)
+--
+13613473-prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2219244:Started GET "/admin/automation_stats?utf8=%E2%9C%93&group_id=1139811&day=2015-06-10&commit=Find" for 114.143.208.210 at Wed Jun 10 09:28:13 +0000 2015
+13613474:prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:2219249:Completed 200 OK in 161364ms (Views: 2.6ms | ActiveRecord: 161351.4ms | Sphinx: 0.0ms)
+--
+13810585-prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:3009328:Started GET "/automate/dashboard_update/28090539/new?&_=1433935560866" for 192.194.190.99 at Wed Jun 10 11:26:00 +0000 2015
+13810586:prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:3009333:Completed 200 OK in 55803ms (Views: 1.2ms | ActiveRecord: 55795.1ms | Sphinx: 0.0ms)
+--
+14083701-prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4105386:Started GET "/automate/builds/71652f6a4b5270fbf9c1fd727d169df78a60e173/sessions/a47b4d1c2fb984695035fff62a74d83b170884df?user_id=43909" for 114.143.208.210 at Wed Jun 10 13:58:50 +0000 2015
+14083702:prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4105430:Completed 200 OK in 51438ms (Views: 573.9ms | ActiveRecord: 1010.8ms | Sphinx: 0.0ms)
+--
+14159320-prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4410406:Started GET "/automate/dashboard_update/28105389/new?&_=1433946846257" for 198.39.100.21 at Wed Jun 10 14:34:06 +0000 2015
+14159321:prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:4410411:Completed 200 OK in 61691ms (Views: 2.0ms | ActiveRecord: 61682.8ms | Sphinx: 0.0ms)
+--
+14340563-prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5145653:Started GET "/terminal/is_on?ts=1433952341066&b=undefined&v=undefined&timestamp=1433952301348&sl=23434745&tabOpened=1433952301356" for 75.151.147.205 at Wed Jun 10 16:05:41 +0000 2015
+14340564:prod9.browserstack.com/2015-06-10/home/app/railsApp/shared/log/production.log:5145709:Completed 200 OK in 50178ms (Views: 0.3ms | ActiveRecord: 90.5ms | Sphinx: 0.0ms)
