@@ -4,9 +4,6 @@
 #              representing individual players in the game, managing their name, score,
 #              and interaction with the dice.
 #
-# Author: Vaibhav
-# Date: June 25, 2025
-#
 module Player
     class PlayerClass
       attr_reader :name
@@ -32,6 +29,4 @@ module Player
   
     end
   end  
-        
-  
-      
+          

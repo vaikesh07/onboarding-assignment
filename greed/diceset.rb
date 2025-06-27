@@ -2,10 +2,6 @@
 #
 # Description: Defines the DiceSet module and the Dice class,
 #              which manages the rolling and representation of dice in the game.
-#
-# Author: Vaibhav
-# Date: June 25, 2025
-#
 module DiceSet
     class Dice
       attr_reader :values
@@ -28,3 +24,4 @@ module DiceSet
       end
     end
   end
+  

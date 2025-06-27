@@ -4,10 +4,6 @@
 #              orchestrating the entire game flow, including managing players,
 #              scoring logic, turn mechanics, and determining the winner.
 #              This file contains the core rules of the dice game (similar to Farkle/Greed).
-#
-# Author: Vaibhav
-# Date: June 25, 2025
-#
 require './player'
 include Player
 
