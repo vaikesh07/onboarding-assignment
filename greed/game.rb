@@ -10,6 +10,9 @@ include Player
 require './diceset'
 include DiceSet
 
+require './game_constants'
+include GameConstants # Include the module to access constants directly
+
 module Game
   class GameClass
   
@@ -35,16 +38,16 @@ module Game
       while i < v.length
         if v[i] == v[i+1] && v[i+1] == v[i+2]
           if v[i] == 1
-            current_score += 1000
+            current_score += SCORE_ONE_TRIPLE
           else
-            current_score += (v[i]*100)
+            current_score += (v[i]*SCORE_TRIPLE_MULTIPLIER)
           end
-          i += 3
+          i += TRIPLE_COUNT
         else
           if v[i] == 1
-            current_score += 100
-          elsif v[i] == 5
-            current_score += 50
+            current_score += SCORE_ONE_SINGLE
+          elsif v[i] == NUM_INITIAL_DICE_ROLL
+            current_score += SCORE_FIVE_SINGLE
           end
           i += 1
         end
@@ -64,20 +67,20 @@ module Game
       i = 0
       while i < v.length
         if v[i] == v[i+1] && v[i+1] == v[i+2]
-          i += 3
-        elsif (v[i] != 1  && v[i] != 5)
+          i += TRIPLE_COUNT
+        elsif (v[i] != 1  && v[i] != NUM_INITIAL_DICE_ROLL)
           i += 1
           count += 1
         else
           i += 1
         end
       end
-      count = 5 if count == 0
+      count = NUM_INITIAL_DICE_ROLL if count == 0
       count
     end
 
     def play_turn(player)
-      player.play(5)
+      player.play(NUM_INITIAL_DICE_ROLL)
       sleep 1 # slow down a bit so that user can see what's happening
       cur_score = score
       print "#{player.name} rolls: " + @dice.to_s+"\n"
@@ -101,7 +104,7 @@ module Game
             print "Score in this round: #{new_score} \n"
             print "Total score: #{@player_score[player]}\n"
           else  # Anything else resorts to No
-            if (@player_score[player] >= 300 || cur_score >=300) 
+            if (@player_score[player] >= MIN_SCORE_TO_BANK || cur_score >=MIN_SCORE_TO_BANK) 
               @player_score[player] += cur_score
             end
             break
@@ -112,7 +115,7 @@ module Game
     
     def final_round?
       @player_score.each_value { |x| 
-        return true if x >= 3000
+        return true if x >= WINNING_SCORE
       }
       return false
     end
@@ -153,7 +156,7 @@ module Game
       print "Final round\n"
       print "-----------\n"
       @players. each { |x|
-        if @player_score[x] < 3000
+        if @player_score[x] < WINNING_SCORE
           play_turn(x)
         end
       }
