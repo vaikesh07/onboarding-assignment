@@ -40,11 +40,6 @@
             // Add new log lines to the array
             logLines.push(...newLogLines);
 
-            // Keep only the last 10 lines
-            // if (logLines.length >= 10) {
-            //     logLines.splice(0, logLines.length - 11);
-            // }
-
             // Update the log display
             logDiv.textContent = logLines.join('\n'); // Join with newlines to keep separate lines
 

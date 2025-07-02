@@ -1,97 +1,162 @@
-const express = require('express'); // used for serving html file to client
-const http = require('http'); // used for creating http server
-const WebSocket = require('ws'); // websocket for real time and bi-directional communication
-const fs = require('fs'); // used to read log files and watch changes
+const express = require('express');
+const http = require('http');
+const WebSocket = require('ws');
+const fs = require('fs');
 const path = require('path');
 
-// Setting up Paths --->
 const LOG_FILE_PATH = path.join(__dirname, 'logfile.log');
 const app = express();
 
-// Serve the client HTML ---->
 app.get('/log', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Create an HTTP server to handle express app
 const server = http.createServer(app);
-
-// Set up WebSocket server to listen on same server
 const wss = new WebSocket.Server({ server });
 
-// Function to send the last 10 lines
-function sendLast10Lines(ws) {
-    fs.stat(LOG_FILE_PATH, (err, stats) => {
-        if (err) {
-            console.error('Error getting file stats:', err);
-            // In a real app, you might want to send an error to the client
-            if (ws.readyState === WebSocket.OPEN) {
-                ws.send('Error: Could not read log file.');
-            }
+/**
+ * Reads the last N lines from a file without reading the entire file into memory.
+ * It reads the file backwards character-by-character (in chunks for efficiency)
+ * and builds the lines until the desired count is reached.
+ *
+ * @param {WebSocket} ws The WebSocket client to send data to.
+ * @param {number} lineCount The number of lines to read from the end of the file.
+ */
+async function sendLastNLines(ws, lineCount) {
+    try {
+        const fileHandle = await fs.promises.open(LOG_FILE_PATH, 'r');
+        const stats = await fileHandle.stat();
+        let fileSize = stats.size;
+
+        if (fileSize === 0) {
+            if (ws.readyState === WebSocket.OPEN) ws.send('');
+            await fileHandle.close();
             return;
         }
 
-        const fileSize = stats.size;
-        const chunkSize = 1024 * 16; // Read the last 16KB
-        const start = Math.max(0, fileSize - chunkSize);
+        const bufferSize = 1024; // Read in 1KB chunks for performance
+        const buffer = Buffer.alloc(bufferSize);
+        let filePosition = fileSize;
+        let currentLine = '';
+        const lines = [];
 
-        const stream = fs.createReadStream(LOG_FILE_PATH, { start, end: fileSize });
+        while (filePosition > 0 && lines.length < lineCount) {
+            const readLength = Math.min(bufferSize, filePosition);
+            filePosition -= readLength;
 
-        let data = '';
-        stream.on('data', chunk => {
-            data += chunk;
-        });
+            await fileHandle.read(buffer, 0, readLength, filePosition);
+            const chunk = buffer.toString('utf-8', 0, readLength);
 
-        stream.on('end', () => {
-            const lines = data.trim().split('\n');
-            // Ensure we don't send more than the last 10 lines
-            const last10Lines = lines.slice(-10).join('\n');
-             if (ws.readyState === WebSocket.OPEN) {
-                ws.send(last10Lines);
-             }
-        });
+            for (let i = chunk.length - 1; i >= 0; i--) {
+                const char = chunk[i];
+                if (char === '\n') {
+                    if (currentLine) {
+                        lines.unshift(currentLine);
+                        currentLine = '';
+                    }
+                    if (lines.length >= lineCount) break;
+                } else {
+                    currentLine = char + currentLine;
+                }
+            }
+        }
 
-        stream.on('error', (err) => {
-            console.error('Error reading log file:', err);
-        });
-    });
+        if (currentLine && lines.length < lineCount) {
+            lines.unshift(currentLine);
+        }
+
+        if (ws.readyState === WebSocket.OPEN) {
+            ws.send(lines.join('\n'));
+        }
+
+        await fileHandle.close();
+
+    } catch (err) {
+        console.error('Error reading log file:', err);
+        if (ws.readyState === WebSocket.OPEN) {
+            ws.send('Error: Could not read log file.');
+        }
+    }
 }
 
-// Watch the log file for real-time updates
-function watchLogFile(ws) {
-    fs.watchFile(LOG_FILE_PATH, { interval: 1000 }, (curr, prev) => {
-        if (curr.size > prev.size) {
-            // New data appended, read only the new part
-            const stream = fs.createReadStream(LOG_FILE_PATH, { start: prev.size, end: curr.size });
 
-            stream.on('data', chunk => {
-                ws.send(chunk.toString());
-            });
+/**
+ * Sets up a single, global watcher for the log file. This watcher maintains a
+ * reading position for each individual client and sends them tailored updates.
+ */
+function setupGlobalFileWatcher() {
+    fs.watch(LOG_FILE_PATH, (eventType) => {
+        if (eventType === 'change') {
+            fs.stat(LOG_FILE_PATH, (err, stats) => {
+                if (err) {
+                    console.error("Error stating file during watch:", err);
+                    return;
+                }
+                const newSize = stats.size;
 
-            stream.on('error', (err) => {
-                console.error('Error reading log file:', err);
+                // Iterate over each connected client
+                wss.clients.forEach(client => {
+                    if (client.readyState === WebSocket.OPEN) {
+                        // Ensure the client has a lastReadPosition, default to 0 if not
+                        if (typeof client.lastReadPosition === 'undefined') {
+                            client.lastReadPosition = 0;
+                        }
+
+                        // If the file has grown, send the new data to this specific client
+                        if (newSize > client.lastReadPosition) {
+                            const stream = fs.createReadStream(LOG_FILE_PATH, {
+                                start: client.lastReadPosition,
+                                end: newSize
+                            });
+
+                            stream.on('data', (chunk) => {
+                                client.send(chunk.toString());
+                            });
+
+                            // Update this client's read position once the data is sent
+                            client.lastReadPosition = newSize;
+
+                        } else if (newSize < client.lastReadPosition) {
+                            // Handle file truncation: reset the client's position
+                            client.lastReadPosition = newSize;
+                        }
+                    }
+                });
             });
         }
     });
+
+    console.log(`Now watching ${LOG_FILE_PATH} for changes.`);
 }
+
 
 // Handle WebSocket connections
 wss.on('connection', (ws) => {
-    // Send the last 10 lines when a new client connects
-    sendLast10Lines(ws);
+    console.log('Client connected');
+    // Send the last 10 lines for initial context
+    sendLastNLines(ws, 10);
 
-    // Watch for real-time updates
-    watchLogFile(ws);
+    // Initialize the reading position for this specific client
+    fs.stat(LOG_FILE_PATH, (err, stats) => {
+        if (!err) {
+            ws.lastReadPosition = stats.size;
+        } else {
+            // If file doesn't exist, start from the beginning
+            ws.lastReadPosition = 0;
+        }
+    });
 
-    // ws.on('close', () => {
-    //     fs.unwatchFile(LOG_FILE_PATH);
-    // });
+    ws.on('close', () => {
+        console.log('Client disconnected');
+    });
 });
-// --- This is the key change for testability ---
-// Only start the server if the file is executed directly
+
+// --- Start the server and the global watcher ---
 if (require.main === module) {
     server.listen(8080, () => {
         console.log('Server listening on http://localhost:8080/log');
+        // Start the single file watcher when the server starts
+        setupGlobalFileWatcher();
     });
 }
 
@@ -99,7 +164,6 @@ if (require.main === module) {
 module.exports = {
     server,
     wss,
-    sendLast10Lines,
-    watchLogFile,
+    sendLastNLines,
     LOG_FILE_PATH
 };
