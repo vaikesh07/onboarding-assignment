@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log File Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #log {
+            white-space: pre-wrap; /* Preserve white spaces and new lines */
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            height: 300px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-time Log File Monitor</h1>
+    <div id="log">Waiting for log updates...</div>
+
+    <script>
+        const logDiv = document.getElementById('log');
+        const ws = new WebSocket(`ws://${window.location.host}`);
+
+        // Array to store the last 10 lines
+        const logLines = [];
+
+        // Function to sanitize incoming data
+        function sanitize(str) {
+            return str.replace(/[^\x20-\x7E\n]/g, '');  // Strip non-printable characters but preserve newlines
+        }
+
+        ws.onmessage = (event) => {
+            const newLogLines = sanitize(event.data).trim().split('\n');
+
+            // Add new log lines to the array
+            logLines.push(...newLogLines);
+
+            // Update the log display
+            logDiv.textContent = logLines.join('\n'); // Join with newlines to keep separate lines
+
+            // Scroll to the bottom of the log div
+            logDiv.scrollTop = logDiv.scrollHeight;
+        };
+
+        ws.onopen = () => {
+            console.log('Connected to WebSocket');
+        };
+
+        ws.onclose = () => {
+            console.log('Disconnected from WebSocket');
+        };
+    </script>
+</body>
+</html>
