@@ -1,70 +1,63 @@
-# README
+# File Sharing 101
 
-File Sharing Application
-A simple web application built with Ruby on Rails for uploading, sharing, and managing files.
+A simple web application built with Ruby on Rails for uploading, sharing, and managing files. This project was built according to the specifications outlined in the product document.
 
-Prerequisites
-Before you begin, ensure you have the following installed:
+## System Requirements
 
-Ruby: 2.6.6
+* **Ruby:** `2.6.6`
+* **Rails:** `6.0.x`
+* **Database:** SQLite3
+* **Node.js & Yarn**
 
-Rails: 6.0.6.1
 
-Database: SQLite3
+## Local Setup and Installation
 
-Node.js
+1.  **Clone the Repository**
+    ```bash
+    git clone <your-repository-url>
+    cd FileSharingApp
+    ```
 
-Yarn
+2.  **Install Ruby**
+    Use a version manager like `rbenv` to install the correct Ruby version.
+    ```bash
+    # For Intel Macs:
+    rbenv install 2.6.6
 
-Setup and Installation
-Clone the repository:
+    # For Apple Silicon Macs (requires Rosetta and Intel Homebrew):
+    arch -x86_64 rbenv install 2.6.6
+    ```
+    Set the local version for the project:
+    ```bash
+    rbenv local 2.6.6
+    ```
 
-Bash
+3.  **Install Bundler & Dependencies**
+    Install the Bundler gem and then install all required Ruby and JavaScript dependencies.
+    ```bash
+    gem install bundler
+    bundle install
+    yarn install
+    ```
 
-git clone <your-repository-url>
-cd FileSharingApp
-Install Ruby:
+4.  **Database Setup**
+    Create and migrate the database to set up the necessary tables.
+    ```bash
+    rails db:create
+    rails db:migrate
+    ```
 
-Bash
+## Running the Application
 
-# For Intel Macs or after setting up Rosetta on Apple Silicon
-rbenv install 2.6.6
-rbenv local 2.6.6
-Install Bundler:
+1.  **Start the Rails Server:**
+    ```bash
+    rails server
+    ```
+2.  **Access the Application:**
+    Open your web browser and navigate to `http://localhost:3000`.
 
-Bash
+## Running Tests
 
-gem install bundler
-
-Bash
-
-bundle install
-
-Install JavaScript Dependencies:
-
-Bash
-
-yarn install
-
-Set up the Database:
-
-Bash
-
-rails db:create
-rails db:migrate
-
-Running the Application
-Start the Rails server:
-
-Bash
-
-rails server
-
-Open your browser and navigate to http://localhost:3000.
-
-Running the Tests
 To run the full RSpec test suite, use the following command:
-
-Bash
-
+```bash
 bundle exec rspec
