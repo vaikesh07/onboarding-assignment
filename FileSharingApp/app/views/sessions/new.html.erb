@@ -11,11 +11,7 @@
     <%= f.password_field :password, placeholder: 'Enter password here' %>
   </div>
 
-  <% if flash[:alert] %>
-    <div class="error"><%= flash[:alert] %></div>
-  <% end %>
-
-  <%= f.submit "Submit" %>
+  <%= f.submit "Login" %>
 <% end %>
 
 <p>Don't have an account? <%= link_to "Sign up", signup_path %></p>

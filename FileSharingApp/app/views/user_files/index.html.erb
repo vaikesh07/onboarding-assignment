@@ -20,7 +20,29 @@
         <td><%= number_to_human_size(file.size) %></td>
         <td>
           <%= link_to 'Download', download_user_file_path(file) %> |
-          <%= link_to 'Delete', file, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Delete', '#', onclick: "
+  if (confirm('Are you sure?')) {
+    const form = document.createElement('form');
+    form.method = 'post';
+    form.action = '#{user_file_path(file)}';
+
+    const methodInput = document.createElement('input');
+    methodInput.type = 'hidden';
+    methodInput.name = '_method';
+    methodInput.value = 'delete';
+    form.appendChild(methodInput);
+
+    const tokenInput = document.createElement('input');
+    tokenInput.type = 'hidden';
+    tokenInput.name = 'authenticity_token';
+    tokenInput.value = '#{form_authenticity_token}';
+    form.appendChild(tokenInput);
+
+    document.body.appendChild(form);
+    form.submit();
+  }
+  return false;
+" %>
         </td>
         <td>
           <%= form_for file, url: share_user_file_path(file), method: :patch do |f| %>
