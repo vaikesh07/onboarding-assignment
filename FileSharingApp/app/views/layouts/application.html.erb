@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FileSharingApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+      /* Basic Reset & Body Styles */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      /* Centered Container */
+      .container {
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 2em;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+
+      /* Header and Navigation */
+      header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 2em;
+      }
+      header nav a {
+        text-decoration: none;
+        color: #007bff;
+        padding: 0.5em 1em;
+      }
+      header nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* Flash Messages */
+      .flash-message {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+      .notice {
+        color: #155724;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+      }
+      .alert {
+        color: #721c24;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+      }
+      /* Add this class to your style block */
+      .button-as-link button {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        color: #007bff !important;
+        text-decoration: underline !important;
+        cursor: pointer !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+      }
+      /* Forms */
+      form div {
+        margin-bottom: 15px;
+      }
+      input[type="text"], input[type="email"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      /* Tables */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f8f9fa;
+      }
+      tbody tr:hover {
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <a href="<%= root_path %>" style="font-weight: bold; font-size: 1.5em;">File Sharing Application</a>
+          <div>
+            <% if logged_in? %>
+              <span>Welcome, <%= current_user.name %></span>
+              <%= link_to 'Profile', profile_path %>
+              <%= button_to 'Logout', logout_path, method: :delete %>
+            <% else %>
+              <%= link_to 'Sign Up', signup_path %>
+              <%= link_to 'Login', login_path %>
+            <% end %>
+          </div>
+        </nav>
+      </header>
+
+      <% flash.each do |type, msg| %>
+        <div class="flash-message <%= type %>"><%= msg %></div>
+      <% end %>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

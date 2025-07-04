@@ -1,0 +1,58 @@
+<h1>File Dashboard - <%= @user_files.count %> files</h1>
+
+<%= link_to 'Upload File', new_user_file_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Upload Date</th>
+      <th>Size</th>
+      <th>Actions</th>
+      <th>Sharing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user_files.each do |file| %>
+      <tr>
+        <td><%= file.name %></td>
+        <td><%= file.created_at.strftime("%d %B %Y") %></td>
+        <td><%= number_to_human_size(file.size) %></td>
+        <td>
+          <%= link_to 'Download', download_user_file_path(file) %> |
+          <%= link_to 'Delete', '#', onclick: "
+  if (confirm('Are you sure?')) {
+    const form = document.createElement('form');
+    form.method = 'post';
+    form.action = '#{user_file_path(file)}';
+
+    const methodInput = document.createElement('input');
+    methodInput.type = 'hidden';
+    methodInput.name = '_method';
+    methodInput.value = 'delete';
+    form.appendChild(methodInput);
+
+    const tokenInput = document.createElement('input');
+    tokenInput.type = 'hidden';
+    tokenInput.name = 'authenticity_token';
+    tokenInput.value = '#{form_authenticity_token}';
+    form.appendChild(tokenInput);
+
+    document.body.appendChild(form);
+    form.submit();
+  }
+  return false;
+" %>
+        </td>
+        <td>
+          <%= form_for file, url: share_user_file_path(file), method: :patch do |f| %>
+            <%= f.check_box :shareable, onchange: 'this.form.submit();' %>
+            <% if file.shareable? %>
+              <%= link_to 'Link', shared_file_url(file.share_token) %>
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+<h1>Login</h1>
+
+<%= form_for :session, url: login_path do |f| %>
+  <div>
+    <%= f.label :username %><br>
+    <%= f.text_field :username, placeholder: 'Enter username here' %>
+  </div>
+
+  <div>
+    <%= f.label :password %><br>
+    <%= f.password_field :password, placeholder: 'Enter password here' %>
+  </div>
+
+  <%= f.submit "Login" %>
+<% end %>
+
+<p>Don't have an account? <%= link_to "Sign up", signup_path %></p>
