@@ -1,0 +1,12 @@
+<h1>Upload a New File</h1>
+
+<%= form_with(model: @user_file) do |f| %>
+  <div>
+    <%= f.label :file %><br>
+    <%= f.file_field :file %>
+  </div>
+
+  <%= f.submit "Upload" %>
+<% end %>
+
+<p><%= link_to 'Back to Dashboard', dashboard_path %></p>

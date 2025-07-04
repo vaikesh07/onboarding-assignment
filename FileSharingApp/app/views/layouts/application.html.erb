@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FileSharingApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <% if logged_in? %>
+          <span><%= current_user.name %></span>
+          <%= link_to 'Profile', profile_path %>
+          <%= link_to 'Logout', logout_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Sign Up', signup_path %>
+          <%= link_to 'Login', login_path %>
+        <% end %>
+      </nav>
+    </header>
+
+    <% flash.each do |type, msg| %>
+      <div class="flash <%= type %>"><%= msg %></div>
+      <div class="flash-message <%= type %>">
+    <%= msg %>
+  </div>
+
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>
