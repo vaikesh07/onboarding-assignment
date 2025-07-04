@@ -39,17 +39,20 @@ gem install bundler
 Bash
 
 bundle install
+
 Install JavaScript Dependencies:
 
 Bash
 
 yarn install
+
 Set up the Database:
 
 Bash
 
 rails db:create
 rails db:migrate
+
 Running the Application
 Start the Rails server:
 
