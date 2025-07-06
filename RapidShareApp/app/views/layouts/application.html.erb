@@ -125,7 +125,7 @@
             <% if user_signed_in? %>
               <span>Welcome, <%= current_user.name || current_user.username %></span>
               <%= link_to 'Edit Profile', edit_user_registration_path, class: 'nav-link' %>
-              <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link', style: 'background:none; border:none; padding:0; font:inherit; cursor:pointer;' %>
+              <%= button_to 'Logout', destroy_user_session_path, { method: :delete, class: 'nav-link', style: 'background:none; border:none; padding:0; font:inherit; cursor:pointer;' } %>
             <% else %>
               <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
               <%= link_to 'Login', new_user_session_path, class: 'nav-link' %>

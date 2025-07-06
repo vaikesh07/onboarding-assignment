@@ -16,6 +16,7 @@
         <td><%= file.created_at.strftime("%d %B %Y") %></td>
         <td>
           <%= link_to 'Download', download_user_file_path(file) %>
+          
           <%= button_to 'Delete', user_file_path(file), method: :delete, class: 'button-as-link', form: { onsubmit: "return confirm('Are you sure?');" } %>
         </td>
         <td>

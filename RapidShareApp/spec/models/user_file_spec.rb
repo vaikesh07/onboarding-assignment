@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe UserFile, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'associations' do
+    it { should belong_to(:user) }
+  end
+
+  it 'mounts the FileUploader on the :file attribute' do
+    user_file = build(:user_file)
+    expect(user_file.file).to be_a(FileUploader)
+  end
 end
