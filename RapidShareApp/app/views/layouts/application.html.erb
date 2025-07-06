@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RapidShareApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+      /* Basic Reset & Body Styles */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      /* Centered Container */
+      .container {
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 2em;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+
+      th, td {
+        text-align: left;
+        padding: 15px; /* This increases the spacing */
+        border-bottom: 1px solid #ddd;
+        vertical-align: middle;
+      }
+      /* Header and Navigation */
+      header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 2em;
+      }
+      header nav a, header nav .nav-link {
+        text-decoration: none;
+        color: #007bff;
+        padding: 0.5em 1em;
+        margin-left: 10px;
+      }
+      header nav a:hover, header nav .nav-link:hover {
+        text-decoration: underline;
+      }
+      .nav-user-info {
+        display: flex;
+        align-items: center;
+      }
+
+      /* Flash Messages */
+      .flash-message {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+      .notice {
+        color: #155724;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+      }
+      .alert {
+        color: #721c24;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+      }
+
+      /* Forms */
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .field_with_errors input {
+        border-color: #dc3545;
+      }
+      #error_explanation {
+        color: #721c24;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+      input[type="text"], input[type="email"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .actions input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+      }
+      .actions input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      /* Devise Links */
+      .devise-links a {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <a href="<%= user_signed_in? ? authenticated_root_path : unauthenticated_root_path %>" style="font-weight: bold; font-size: 1.5em;">RapidShare</a>
+          <div class="nav-user-info">
+            <% if user_signed_in? %>
+              <span>Welcome, <%= current_user.name || current_user.username %></span>
+              <%= link_to 'Edit Profile', edit_user_registration_path, class: 'nav-link' %>
+              <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link', style: 'background:none; border:none; padding:0; font:inherit; cursor:pointer;' %>
+            <% else %>
+              <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+              <%= link_to 'Login', new_user_session_path, class: 'nav-link' %>
+            <% end %>
+          </div>
+        </nav>
+      </header>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<h1>Shared File from <%= @user_file.user.name %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Upload Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @user_file.name %></td>
+      <td><%= @user_file.created_at.strftime("%d %B %Y") %></td>
+      <td>
+        <%= link_to 'Download', public_download_path(token: @user_file.share_token) %>
+      </td>
+    </tr>
+  </tbody>
+</table>
