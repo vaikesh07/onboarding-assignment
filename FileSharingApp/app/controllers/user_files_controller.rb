@@ -41,7 +41,16 @@ class UserFilesController < ApplicationController
   end
 
   def shared
-    @user_file = UserFile.find_by!(share_token: params[:token])
+    # Use find_by, which returns nil instead of raising an error
+    @user_file = UserFile.find_by(share_token: params[:token])
+
+    # If the file is not found or no longer shareable, redirect with a message
+    if @user_file.nil? || !@user_file.shareable?
+      redirect_to login_path, alert: "This sharing link is no longer valid."
+      return # Stop further execution
+    end
+
+    # If we get here, the file is valid and the 'shared.html.erb' view will be rendered
   end
 
   def public_download
