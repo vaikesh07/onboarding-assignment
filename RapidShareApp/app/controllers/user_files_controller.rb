@@ -2,7 +2,8 @@ class UserFilesController < ApplicationController
   before_action :authenticate_user!, except: [:shared, :public_download] # Devise's login check
 
   def index
-    @user_files = current_user.user_files.order(created_at: :desc)
+    # @user_files = current_user.user_files.order(created_at: :desc)
+    @user_files = current_user.user_files.order(created_at: :desc).page(params[:page])
   end
 
   def new
