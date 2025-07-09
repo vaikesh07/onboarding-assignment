@@ -1,11 +1,12 @@
 class UserFile < ApplicationRecord
   belongs_to :user
-  mount_uploader :file, FileUploader # This is the key line for CarrierWave
+  mount_uploader :file, FileUploader
 
-  # Add this validation
-  validates :name, length: { maximum: 255 }, allow_blank: true
+  validates :name, length: { maximum: 255 }
 
-  # Add the same sharing logic as before
+  # This callback ensures file deletion is part of the main transaction
+  before_destroy :delete_file_or_abort
+
   before_update :generate_share_token, if: -> { shareable? && share_token.blank? }
   before_update :clear_share_token, unless: :shareable?
 
@@ -17,5 +18,17 @@ class UserFile < ApplicationRecord
 
   def clear_share_token
     self.share_token = nil
+  end
+
+  def delete_file_or_abort
+    begin
+      # This CarrierWave method deletes the file from the disk
+      self.file.remove!
+    rescue => e
+      # If there's any error, add an error to the object and, most importantly,
+      # abort the entire destroy transaction.
+      errors.add(:base, "Could not delete file: #{e.message}")
+      throw :abort
+    end
   end
 end
