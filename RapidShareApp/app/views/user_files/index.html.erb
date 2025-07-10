@@ -1,0 +1,38 @@
+<h1>File Dashboard - <%= @user_files.count %> files</h1>
+<%= link_to 'Upload File', new_user_file_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Upload Date</th>
+      <th>Actions</th>
+      <th>Sharing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user_files.each do |file| %>
+      <tr>
+        <td><%= file.name %></td>
+        <td><%= file.created_at.strftime("%d %B %Y") %></td>
+        <td>
+          <%= link_to 'Download', download_user_file_path(file) %>
+          
+          <%= button_to 'Delete', user_file_path(file), method: :delete, class: 'button-as-link', form: { onsubmit: "return confirm('Are you sure?');" } %>
+        </td>
+        <td>
+          <%= form_for file, url: share_user_file_path(file), method: :patch do |f| %>
+            <%= f.check_box :shareable, onchange: 'this.form.submit();' %>
+            <% if file.shareable? %>
+              <%= link_to 'Link', shared_file_url(file.share_token) %>
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!-- Add this line at the bottom -->
+<%= paginate @user_files %>
